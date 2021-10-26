@@ -1,4 +1,6 @@
+import { Button } from "@chakra-ui/button";
 import { Box, Text } from "@chakra-ui/layout";
+import { Author } from "../components/Author";
 import { useRouter } from "../hooks/useRouter.hook";
 
 export default function IndexPage() {
@@ -12,8 +14,11 @@ export default function IndexPage() {
         justifyContent="center"
         alignItems="center"
       >
-        <Text fontSize="4xl">WAGMI</Text>
-        <button onClick={() => router.push("/wagmi")}>To NotFoundPage</button>
+        <Box>
+          <Text fontSize="4xl">WAGMI</Text>
+          <Button onClick={() => router.push("/wagmi")}>To NotFoundPage</Button>
+          <Author />
+        </Box>
       </Box>
     </>
   );
