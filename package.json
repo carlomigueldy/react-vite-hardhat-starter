@@ -1,16 +1,29 @@
 {
   "name": "react-vite-hardhat-starter",
   "version": "0.0.0",
+  "private": true,
+  "author": {
+    "email": "carlomigueldy@gmail.com",
+    "name": "Carlo Miguel Dy",
+    "url": "https://carlomigueldy.dev"
+  },
   "scripts": {
     "dev": "vite",
     "build": "tsc && vite build",
     "serve": "vite preview",
     "compile": "hardhat compile",
-    "test": "hardhat test" 
+    "deploy": "hardhat run scripts/deploy.ts --network localhost",
+    "deploy:rinkeby": "hardhat run scripts/deploy.ts --network rinkeby",
+    "chain": "hardhat node",
+    "test": "hardhat test"
   },
   "dependencies": {
+    "@types/query-string": "^6.3.0",
+    "@types/react-router-dom": "^5.3.2",
+    "query-string": "^7.0.1",
     "react": "^17.0.0",
-    "react-dom": "^17.0.0"
+    "react-dom": "^17.0.0",
+    "react-router-dom": "^5.3.0"
   },
   "devDependencies": {
     "@nomiclabs/hardhat-ethers": "^2.0.2",
